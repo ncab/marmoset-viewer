@@ -1,0 +1,21 @@
+<div class="marmosetviewermain">
+<script>
+    // changeIFrame takes in a html img instance where it replaces the 'src' of an iframe id'ed as 'marmoset-ifram' with that the image instance's id value
+    function changeIFrame(image) {
+        // Get the iframe id'ed as 'marmoset-ifram'
+        var iframe = document.getElementById('marmoset-iframe');
+        // Replace its src with the image's id value
+        // It's assumed that id is the url for another marmoset scene
+        iframe.src = image.id;
+        };
+</script><br />
+<iframe id="marmoset-iframe" style="margin-bottom: -10px;" src="https://ncab.github.io/marmoset_viewer/kawaii_girl/kawaii_fruits_01.html" name="viewergallery" allowfullscreen="allowfullscreen" width="100%" height="600" frameborder="0" onmousewheel="" scrolling="no"></iframe></div>
+<!-- Each image should have an id that holds the url for its own marmoset scene -->
+<div class="row">
+<div class="column">
+<img onclick="changeIFrame(this)" src="https://ncabalceta.com/wp-content/uploads/2021/03/girl-1024x576.jpg" id="https://ncab.github.io/marmoset_viewer/kawaii_girl/kawaii_fruits_01.html" width="100%"></div>
+<div class="column">
+<img onclick="changeIFrame(this)" src="https://ncabalceta.com/wp-content/uploads/2021/03/chest-1-1024x576.jpg" id="https://ncab.github.io/marmoset_viewer/worn_chest/worn_chest.html" width="100%"></div>
+<div class="column">
+<img onclick="changeIFrame(this)" src="https://ncabalceta.com/wp-content/uploads/2021/06/screenshot000.png" id="https://ncab.github.io/marmoset_viewer/cigars_babies/cigars.html" width="100%"></div>
+</div>
