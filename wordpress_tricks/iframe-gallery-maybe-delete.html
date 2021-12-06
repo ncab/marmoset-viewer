@@ -1,0 +1,48 @@
+
+<div class="marmosetviewermain" style="padding: 0px 0px; background-position: left top; background-repeat: no-repeat; background-size: cover; min-height: auto; height: auto;">
+<script>
+// changeIFrame takes in a html img instance where it replaces the 'src' of an iframe id'ed as 'marmoset-ifram' with that the image instance's id value
+function changeIFrame(image) {
+    // Get the iframe id'ed as 'marmoset-ifram'
+    var iframe = document.getElementById('marmoset-iframe');
+    // Replace its src with the image's id value
+    // It's assumed that id is the url for another marmoset scene
+    iframe.src = image.alt;
+    };
+
+function resizeToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    }
+
+window.addEventListener(
+    'DOMContentLoaded',
+    function(e) {
+        // get the iframe by referencing its id
+        var iFrame = document.getElementById( 'marmoset-iframe' );
+        resizeToFitContent( iFrame );
+
+        // or, to resize all iframes:
+        var iframes = document.querySelectorAll("iframe");
+        for( var i = 0; i < iframes.length; i++) {
+            resizeToFitContent( iframes[i] );
+        }
+        
+        // get the UI element by referencing its id
+        var marmosetUI = document.getElementById( 'marmosetUI' );
+        resizeToFitContent( marmosetUI );
+    }
+);
+// 1) Get the element by the id of the image 2) add a event listener to look out for any "click" on that element 3) if the element is clicked,
+document.getElementById ("kawaii-fruits-01-swap-marmoset-scene").addEventListener ("click", changeIFrame, false);
+document.getElementById ("worn-chest-swap-marmoset-scene").addEventListener ("click", changeIFrame, false);
+document.getElementById ("kids-lunch-swap-marmoset-scene").addEventListener ("click", changeIFrame, false);
+</script>
+<iframe id="marmoset-iframe" style="margin-bottom: -10px;" src="https://ncab.github.io/marmoset_viewer/kawaii_girl/kawaii_fruits_01.html" name="viewergallery" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>
+<!-- Each image should have an id that holds the url for its own marmoset scene -->
+<div class="row">
+<div class="column"><img onclick="changeIFrame(this)" id="kawaii-fruits-01-swap-marmoset-scene" alt="https://ncab.github.io/marmoset_viewer/kawaii_girl/kawaii_fruits_01.html" class="aligncenter" src="https://ncabalceta.com/wp-content/uploads/2021/03/girl-1024x576.jpg" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="worn-chest-swap-marmoset-scene" alt="https://ncab.github.io/marmoset_viewer/worn_chest/worn_chest.html" class="aligncenter" src="https://ncabalceta.com/wp-content/uploads/2021/03/chest-1-1024x576.jpg" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="kids-lunch-swap-marmoset-scene" alt="https://ncab.github.io/marmoset_viewer/kids_lunch/kids_lunch.html" class="aligncenter" src="https://ncabalceta.com/wp-content/uploads/2021/03/lunch-1024x576.jpg" width="100%" /></div>
+</div>
