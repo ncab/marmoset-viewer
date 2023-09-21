@@ -1,0 +1,19 @@
+<div class="marmosetviewermain"><script>
+    // changeIFrame takes in a html img instance where it replaces the 'src' of an iframe id'ed as 'marmoset-iframe' with that the image instance's id value
+    function changeIFrame(image) {
+        // Get the iframe id'ed as 'marmoset-iframe'
+        var iframe = document.getElementById('marmoset-iframe');
+        // Replace its src with the image's id value
+        // It's assumed that id is the url for another marmoset scene
+        iframe.src = image.id;
+        };
+</script>
+<iframe id="marmoset-iframe" style="margin-bottom: -10px;" src="https://ncab.github.io/marmoset-viewer/king_penny/king_penny.html" name="viewergallery" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></div>
+<!-- Each image should have an id that holds the url for its own marmoset scene -->
+<div class="row">
+<div class="column"><img onclick="changeIFrame(this)" id="https://ncab.github.io/marmoset-viewer/king_penny/king_penny.html" src="https://ncabalceta.com/wp-content/uploads/2021/08/king_penny_grey-scaled.jpg" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="https://ncab.github.io/marmoset-viewer/ttartt/TeddyHead_CreepyCute06.html" src="https://ncabalceta.com/wp-content/uploads/2022/03/TeddyHead_AR.png" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="https://ncab.github.io/marmoset-viewer/hilly_scene/hilly_scene.html" src="https://ncabalceta.com/wp-content/uploads/2021/08/hilly_scene_funomena-scaled.jpg" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="https://ncab.github.io/marmoset-viewer/worn_chest/worn chest.html" src="https://ncabalceta.com/wp-content/uploads/2021/07/Chest__004.jpg" width="100%" /></div>
+<div class="column"><img onclick="changeIFrame(this)" id="https://ncab.github.io/marmoset-viewer/kids_hospital_room/kids_hospital_room.html" src="https://ncabalceta.com/wp-content/uploads/2021/08/WIP_Room.jpg" width="100%" /></div>
+</div>
